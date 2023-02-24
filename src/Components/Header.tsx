@@ -15,7 +15,7 @@ export function Header() {
             <li>
               <a
                 className="hover:text-violet-500 transition-colors duration-300"
-                href="#"
+                href="#work-experience"
               >
                 Work Experience
               </a>
@@ -23,7 +23,7 @@ export function Header() {
             <li>
               <a
                 className="hover:text-violet-500 transition-colors duration-300"
-                href="#"
+                href="#about"
               >
                 About
               </a>
@@ -31,7 +31,7 @@ export function Header() {
             <li>
               <a
                 className="hover:text-violet-500 transition-colors duration-300"
-                href="#"
+                href="#contact"
               >
                 Contact
               </a>
@@ -39,7 +39,9 @@ export function Header() {
             <li>
               <a
                 className="hover:text-violet-500 transition-colors duration-300"
-                href="#"
+                target={'_blank'}
+                href="https://github.com/lucasfcm9"
+                rel="noreferrer"
               >
                 <Image src={GithubIcon} width={24} alt="" />
               </a>
@@ -47,7 +49,9 @@ export function Header() {
             <li>
               <a
                 className="hover:text-violet-500 transition-colors duration-300"
-                href="#"
+                target={'_blank'}
+                href="https://www.linkedin.com/in/lucas-fellipe/"
+                rel="noreferrer"
               >
                 <Image src={LinkedinIcon} width={24} alt="" />
               </a>
@@ -55,7 +59,9 @@ export function Header() {
             <li>
               <a
                 className="hover:text-violet-500 transition-colors duration-300"
-                href="#"
+                target={'_blank'}
+                href="https://twitter.com/lucasfcm9"
+                rel="noreferrer"
               >
                 <Image src={TwitterIcon} width={24} alt="" />
               </a>
