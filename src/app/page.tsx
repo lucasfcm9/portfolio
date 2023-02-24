@@ -1,91 +1,215 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+'use client'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Header } from '@/Components/Header'
+import Image from 'next/image'
+import { Check } from 'phosphor-react'
+
+import breloImage from '@/assets/work/brelo.svg'
+import TCUImage from '@/assets/work/tcu.png'
+import dogIncImage from '@/assets/work/doginc.svg'
+
+import { programmingLanguages } from '@/assets/languages/skills'
+import { Hero } from '@/Components/Hero'
+
+import GithubIcon from '@/assets/github-icon.svg'
+import LinkedinIcon from '@/assets/linkedin-icon.svg'
+import TwitterIcon from '@/assets/twitter-icon.svg'
+import { Badge } from '@/Components/Badge'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Header />
+      <Hero />
+
+      <section className="w-full mx-auto mt-24 2xl:max-w-7xl p-4">
+        <div className="flex flex-col items-center justify-center gap-6">
+          <h1 className="text-6xl">My Tech Stack</h1>
+          <h2 className="text-2xl text-[#606060]">
+            Technologies I&apos;ve been working with recently
+          </h2>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+        <div className="grid grid-cols-7 gap-6 mt-8">
+          {programmingLanguages.map((language, index) => {
+            return <Image key={index} src={language} width={96} alt="" />
+          })}
         </div>
-      </div>
+      </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
+      <section className="w-full mx-auto mt-24 2xl:max-w-7xl p-4">
+        <div className="flex flex-col items-center justify-center gap-6">
+          <h1 className="text-6xl">Work Experience</h1>
+          <h2 className="text-2xl text-[#606060]">
+            My professional experience
           </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+        <div className="flex gap-6 mt-12 w-full">
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <h1 className="text-xl font-medium text-black">Brelo</h1>
+            <span className="text-[#606060] text-sm -mt-4">
+              Apr. 2022 - Dec. 2022
+            </span>
+            <nav>
+              <ul className="mb-8 space-y-4 text-left list-none">
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Maintainability and upgradeability of high-volume
+                    microservices for cloud computing platforms (AWS, GCP etc)
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Development of new functionalities in the Backend
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Integration of Back-end systems with third-party platforms
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Creation of new functionalities, changes in the Design
+                    System and maintenance of the Company&apos;s Dashboard
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Creation of a Widget developed in JavaScript with the
+                    objective of making payments on third-party platforms
+                  </span>
+                </li>
+              </ul>
+            </nav>
+            <div className="flex items-center flex-wrap gap-2 text-sm -mt-6">
+              <Badge color="bg-violet-400" text="Python" />
+              <Badge color="bg-blue-400" text="Django" />
+              <Badge color="bg-green-400" text="Django Rest Framework" />
+              <Badge color="bg-gray-400" text="Apache Kafka" />
+              <Badge color="bg-pink-400" text="Microservices" />
+              <Badge color="bg-stone-400" text="OAuth" />
+              <Badge color="bg-zinc-400" text="API Rest" />
+              <Badge color="bg-red-400" text="JavaScript" />
+              <Badge color="bg-orange-400" text="Docker" />
+              <Badge color="bg-yellow-400" text="PostgreSQL" />
+            </div>
+          </div>
+          <Image className="w-64 p-4 ml-auto" src={breloImage} alt="" />
+        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="flex gap-6 mt-12 w-full">
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <h1 className="text-xl font-medium text-black">Dog Inc.</h1>
+            <span className="text-[#606060] text-sm -mt-4">
+              Jan. 2019 - Present (Freelancer)
+            </span>
+            <nav>
+              <ul className="mb-8 space-y-4 text-left list-none">
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Creating performative algorithms in C++ to develop
+                    strategies for the financial market
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Data analysis and visualization of financial data
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Creating robots on the MetaTrader 5 platform
+                  </span>
+                </li>
+              </ul>
+            </nav>
+            <div className="flex items-center flex-wrap gap-2 text-sm -mt-6">
+              <Badge color="bg-violet-400" text="C" />
+              <Badge color="bg-blue-400" text="C++" />
+              <Badge color="bg-green-400" text="Python" />
+              <Badge color="bg-gray-400" text="MQL5" />
+              <Badge color="bg-pink-400" text="PineScript" />
+            </div>
+          </div>
+          <Image className="w-64 p-4 ml-auto" src={dogIncImage} alt="" />
+        </div>
+
+        <div className="flex gap-6 mt-12 w-full">
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <h1 className="text-xl font-medium text-black">
+              TCU (Tribunal de Contas da União){' '}
+            </h1>
+            <span className="text-[#606060] text-sm -mt-4">
+              Sep. 2020 - Sep. 2021
+            </span>
+            <nav>
+              <ul className="mb-8 space-y-4 text-left list-none">
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Development of web systems using APEX (Oracle Application
+                    Express) for projects in several areas of the TCU
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">Creation of new databases</span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Creation of new functionalities and maintainability of the
+                    Dashboards
+                  </span>
+                </li>
+              </ul>
+            </nav>
+            <div className="flex items-center flex-wrap gap-2 text-sm -mt-6">
+              <Badge color="bg-violet-400" text="Oracle" />
+              <Badge color="bg-blue-400" text="SQL" />
+              <Badge color="bg-green-400" text="PL/SQL" />
+              <Badge color="bg-gray-400" text="Python" />
+            </div>
+          </div>
+          <Image className="w-64 p-4 ml-auto" src={TCUImage} alt="" />
+        </div>
+      </section>
+
+      <footer className="w-full mx-auto mt-24 2xl:max-w-7xl p-4">
+        <div className="flex justify-between items-center">
+          <strong className="text-violet-500 text-sm">
+            Designed and Built by Lucas Fellipe with Love
+          </strong>
+          <nav>
+            <ul className="flex items-center gap-6 list-none">
+              <li>
+                <a href="">
+                  <Image src={GithubIcon} width={24} alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Image src={LinkedinIcon} width={24} alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Image src={TwitterIcon} width={24} alt="" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </>
   )
 }
