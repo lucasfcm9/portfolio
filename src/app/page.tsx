@@ -49,6 +49,46 @@ export default function Home() {
         </div>
 
         <div className="flex gap-6 mt-12 w-full">
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <h1 className="text-xl font-medium text-black">Dog Inc.</h1>
+            <span className="text-[#606060] text-sm -mt-4">
+              Jan. 2019 - Present (Freelancer)
+            </span>
+            <nav>
+              <ul className="mb-8 space-y-4 text-left list-none">
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Creating performative algorithms in C++ to develop
+                    strategies for the financial market
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Data analysis and visualization of financial data
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3 gap-2">
+                  <Check className="flex-shrink-0" size={20} />
+                  <span className="text-sm">
+                    Creating robots on the MetaTrader 5 platform
+                  </span>
+                </li>
+              </ul>
+            </nav>
+            <div className="flex items-center flex-wrap gap-2 text-sm -mt-6">
+              <Badge color="bg-indigo-400" text="C" />
+              <Badge color="bg-indigo-400" text="C++" />
+              <Badge color="bg-blue-400" text="Python" />
+              <Badge color="bg-orange-400" text="MQL5" />
+              <Badge color="bg-pink-400" text="PineScript" />
+            </div>
+          </div>
+          <Image className="w-64 p-4 ml-auto" src={dogIncImage} alt="" />
+        </div>
+
+        <div className="flex gap-6 mt-12 w-full">
           <div className="flex flex-col gap-6 max-w-6xl">
             <h1 className="text-xl font-medium text-black">Brelo</h1>
             <span className="text-[#606060] text-sm -mt-4">
@@ -105,46 +145,6 @@ export default function Home() {
             </div>
           </div>
           <Image className="w-64 p-4 ml-auto" src={breloImage} alt="" />
-        </div>
-
-        <div className="flex gap-6 mt-12 w-full">
-          <div className="flex flex-col gap-6 max-w-3xl">
-            <h1 className="text-xl font-medium text-black">Dog Inc.</h1>
-            <span className="text-[#606060] text-sm -mt-4">
-              Jan. 2019 - Present (Freelancer)
-            </span>
-            <nav>
-              <ul className="mb-8 space-y-4 text-left list-none">
-                <li className="flex items-center space-x-3 gap-2">
-                  <Check className="flex-shrink-0" size={20} />
-                  <span className="text-sm">
-                    Creating performative algorithms in C++ to develop
-                    strategies for the financial market
-                  </span>
-                </li>
-                <li className="flex items-center space-x-3 gap-2">
-                  <Check className="flex-shrink-0" size={20} />
-                  <span className="text-sm">
-                    Data analysis and visualization of financial data
-                  </span>
-                </li>
-                <li className="flex items-center space-x-3 gap-2">
-                  <Check className="flex-shrink-0" size={20} />
-                  <span className="text-sm">
-                    Creating robots on the MetaTrader 5 platform
-                  </span>
-                </li>
-              </ul>
-            </nav>
-            <div className="flex items-center flex-wrap gap-2 text-sm -mt-6">
-              <Badge color="bg-indigo-400" text="C" />
-              <Badge color="bg-indigo-400" text="C++" />
-              <Badge color="bg-blue-400" text="Python" />
-              <Badge color="bg-orange-400" text="MQL5" />
-              <Badge color="bg-pink-400" text="PineScript" />
-            </div>
-          </div>
-          <Image className="w-64 p-4 ml-auto" src={dogIncImage} alt="" />
         </div>
 
         <div className="flex gap-6 mt-12 w-full">
