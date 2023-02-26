@@ -2,7 +2,7 @@
 
 import { Header } from '@/Components/Header'
 import Image from 'next/image'
-import { Check } from 'phosphor-react'
+import { Check, LinkedinLogo, TwitterLogo } from 'phosphor-react'
 
 import breloImage from '@/assets/work/brelo.svg'
 import TCUImage from '@/assets/work/tcu.png'
@@ -11,10 +11,8 @@ import dogIncImage from '@/assets/work/doginc.svg'
 import { programmingLanguages } from '@/assets/languages/skills'
 import { Hero } from '@/Components/Hero'
 
-import GithubIcon from '@/assets/github-icon.svg'
-import LinkedinIcon from '@/assets/linkedin-icon.svg'
-import TwitterIcon from '@/assets/twitter-icon.svg'
 import { Badge } from '@/Components/Badge'
+import { Github } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -27,7 +25,7 @@ export default function Home() {
           <h1 id="my-tech-stack" className="text-6xl">
             My Tech Stack
           </h1>
-          <h2 className="text-2xl text-[#606060]">
+          <h2 className="text-2xl text-[#606060] dark:text-gray-100">
             Technologies I&apos;ve been working with recently
           </h2>
         </div>
@@ -43,15 +41,17 @@ export default function Home() {
           <h1 id="work-experience" className="text-6xl">
             Work Experience
           </h1>
-          <h2 className="text-2xl text-[#606060]">
+          <h2 className="text-2xl text-[#606060] dark:text-gray-100">
             My professional experience
           </h2>
         </div>
 
         <div className="flex gap-6 mt-12 w-full">
           <div className="flex flex-col gap-6 max-w-3xl">
-            <h1 className="text-xl font-medium text-black">Dog Inc.</h1>
-            <span className="text-[#606060] text-sm -mt-4">
+            <h1 className="text-xl font-medium text-black dark:text-white">
+              Dog Inc.
+            </h1>
+            <span className="text-[#606060] text-sm -mt-4 dark:text-gray-100">
               Jan. 2019 - Present (Freelancer)
             </span>
             <nav>
@@ -90,8 +90,10 @@ export default function Home() {
 
         <div className="flex gap-6 mt-12 w-full">
           <div className="flex flex-col gap-6 max-w-6xl">
-            <h1 className="text-xl font-medium text-black">Brelo</h1>
-            <span className="text-[#606060] text-sm -mt-4">
+            <h1 className="text-xl font-medium text-black dark:text-white">
+              Brelo
+            </h1>
+            <span className="text-[#606060] text-sm -mt-4 dark:text-gray-100">
               Apr. 2022 - Dec. 2022
             </span>
             <nav>
@@ -149,10 +151,10 @@ export default function Home() {
 
         <div className="flex gap-6 mt-12 w-full">
           <div className="flex flex-col gap-6 max-w-3xl">
-            <h1 className="text-xl font-medium text-black">
+            <h1 className="text-xl font-medium text-black dark:text-white">
               TCU (Tribunal de Contas da União){' '}
             </h1>
-            <span className="text-[#606060] text-sm -mt-4">
+            <span className="text-[#606060] text-sm -mt-4 dark:text-gray-100">
               Sep. 2020 - Sep. 2021
             </span>
             <nav>
@@ -197,7 +199,7 @@ export default function Home() {
             <ul className="flex items-center gap-6 list-none">
               <li>
                 <a
-                  className="hover:text-violet-500 transition-colors duration-300 text-[#606060]"
+                  className="hover:text-violet-500 transition-colors duration-300 text-[#606060] dark:text-gray-100 dark:hover:text-violet-500"
                   href="mailto:lucas.fellipe.c@gmail.com"
                 >
                   lucas.fellipe.c@gmail.com
@@ -205,29 +207,32 @@ export default function Home() {
               </li>
               <li>
                 <a
+                  className="hover:text-violet-500 transition-colors duration-300"
                   target={'_blank'}
                   href="https://github.com/lucasfcm9"
                   rel="noreferrer"
                 >
-                  <Image src={GithubIcon} width={24} alt="" />
+                  <Github size={24} />
                 </a>
               </li>
               <li>
                 <a
+                  className="hover:text-violet-500 transition-colors duration-300"
                   href="https://www.linkedin.com/in/lucas-fellipe/"
                   target={'_blank'}
                   rel="noreferrer"
                 >
-                  <Image src={LinkedinIcon} width={24} alt="" />
+                  <LinkedinLogo size={24} />
                 </a>
               </li>
               <li>
                 <a
+                  className="hover:text-violet-500 transition-colors duration-300"
                   href="https://twitter.com/lucasfcm9"
                   target={'_blank'}
                   rel="noreferrer"
                 >
-                  <Image src={TwitterIcon} width={24} alt="" />
+                  <TwitterLogo size={24} />
                 </a>
               </li>
             </ul>

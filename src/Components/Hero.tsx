@@ -7,7 +7,7 @@ export function Hero() {
         <h1 id="about" className="text-7xl">
           Hello, I&apos;m Lucas Fellipe.
         </h1>
-        <p className="text-2xl text-[#606060]">
+        <p className="text-2xl text-[#606060] dark:text-gray-100">
           I&apos;m a Software Engineer. I&apos;m passionate about building
           software that helps people.
         </p>
