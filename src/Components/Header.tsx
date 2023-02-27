@@ -25,10 +25,10 @@ export function Header() {
 
   return (
     <header className="w-full mx-auto border-b mt-6 2xl:max-w-7xl">
-      <div className="flex flex-row items-center justify-between mt-6 mb-4">
-        <span className="text-4xl">luc.</span>
+      <div className="flex flex-row items-center justify-between mt-6 mb-4 sm:justify-center">
+        <span className="text-4xl sm:hidden">luc.</span>
         <nav>
-          <ul className="flex items-center gap-6 list-none">
+          <ul className="flex items-center gap-6 list-none sm:text-sm sm:gap-3">
             <li>
               <a
                 className="hover:text-violet-500 transition-colors duration-300"

@@ -25,11 +25,11 @@ export default function Home() {
           <h1 id="my-tech-stack" className="text-6xl">
             My Tech Stack
           </h1>
-          <h2 className="text-2xl text-[#606060] dark:text-gray-100">
+          <h2 className="text-2xl text-[#606060] dark:text-gray-100 sm:text-xl">
             Technologies I&apos;ve been working with recently
           </h2>
         </div>
-        <div className="grid grid-cols-7 gap-6 mt-8">
+        <div className="grid grid-cols-7 gap-6 mt-8 sm:grid-cols-3">
           {programmingLanguages.map((language, index) => {
             return (
               <div
@@ -48,7 +48,7 @@ export default function Home() {
           <h1 id="work-experience" className="text-6xl">
             Work Experience
           </h1>
-          <h2 className="text-2xl text-[#606060] dark:text-gray-100">
+          <h2 className="text-2xl text-[#606060] dark:text-gray-100 sm:text-xl">
             My professional experience
           </h2>
         </div>
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       <footer id="contact" className="w-full mx-auto mt-24 2xl:max-w-7xl p-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center sm:flex-col sm:gap-2 sm:-mt-6">
           <strong className="text-violet-500 text-sm">
             Designed and Built by Lucas Fellipe with Love
           </strong>
