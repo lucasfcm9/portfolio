@@ -85,14 +85,17 @@ export function Header() {
             </li>
             <li>
               <a
-                className="hover:text-violet-500 hover:border-violet-500 transition-colors duration-300 border border-black px-2 py-2 rounded-lg dark:border-white dark:hover:border-violet-500"
+                className="hover:text-violet-500 hover:border-violet-500 transition-colors duration-300 border border-black px-2 py-2 rounded-lg dark:border-white dark:hover:border-violet-500 sm:hidden"
                 href="#"
               >
                 Resume
               </a>
             </li>
             <li>
-              <button onClick={toggleDarkMode}>
+              <button
+                className="hover:text-violet-500 transition-colors dark:hover:border-violet-500 sm:mt-1"
+                onClick={toggleDarkMode}
+              >
                 {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}
               </button>
             </li>

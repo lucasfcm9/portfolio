@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           </div>
           <Image
-            className="ml-auto w-64 p-4 dark:hidden"
+            className="ml-auto w-64 p-4 dark:hidden sm:hidden"
             src={dogIncImage}
             alt=""
           />
@@ -158,7 +158,7 @@ export default function Home() {
             </div>
           </div>
           <Image
-            className="ml-auto w-64 p-4 dark:hidden"
+            className="ml-auto w-64 p-4 dark:hidden sm:hidden"
             src={breloImage}
             alt=""
           />
@@ -202,7 +202,7 @@ export default function Home() {
             </div>
           </div>
           <Image
-            className="ml-auto w-64 p-4 dark:hidden"
+            className="ml-auto w-64 p-4 dark:hidden sm:hidden"
             src={TCUImage}
             alt=""
           />
