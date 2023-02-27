@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 export function Header() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(theme === 'dark')
 
   useEffect(() => {
     setMounted(true)

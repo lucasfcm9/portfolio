@@ -31,7 +31,14 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-7 gap-6 mt-8">
           {programmingLanguages.map((language, index) => {
-            return <Image key={index} src={language} width={96} alt="" />
+            return (
+              <div
+                key={index}
+                className="rounded-lg flex items-center justify-center p-2 dark:bg-stone-300 dark:bg-opacity-5"
+              >
+                <Image src={language} width={96} alt="" />
+              </div>
+            )
           })}
         </div>
       </section>
@@ -52,7 +59,7 @@ export default function Home() {
               Dog Inc.
             </h1>
             <span className="text-[#606060] text-sm -mt-4 dark:text-gray-100">
-              Jan. 2019 - Present (Freelancer)
+              Jan. 2019 - Present
             </span>
             <nav>
               <ul className="mb-8 space-y-4 text-left list-none">
@@ -85,7 +92,11 @@ export default function Home() {
               <Badge color="bg-pink-400" text="PineScript" />
             </div>
           </div>
-          <Image className="w-64 p-4 ml-auto" src={dogIncImage} alt="" />
+          <Image
+            className="ml-auto w-64 p-4 dark:hidden"
+            src={dogIncImage}
+            alt=""
+          />
         </div>
 
         <div className="flex gap-6 mt-12 w-full">
@@ -146,7 +157,11 @@ export default function Home() {
               <Badge color="bg-red-400" text="PostgreSQL" />
             </div>
           </div>
-          <Image className="w-64 p-4 ml-auto" src={breloImage} alt="" />
+          <Image
+            className="ml-auto w-64 p-4 dark:hidden"
+            src={breloImage}
+            alt=""
+          />
         </div>
 
         <div className="flex gap-6 mt-12 w-full">
@@ -186,7 +201,11 @@ export default function Home() {
               <Badge color="bg-blue-400" text="Python" />
             </div>
           </div>
-          <Image className="w-64 p-4 ml-auto" src={TCUImage} alt="" />
+          <Image
+            className="ml-auto w-64 p-4 dark:hidden"
+            src={TCUImage}
+            alt=""
+          />
         </div>
       </section>
 
